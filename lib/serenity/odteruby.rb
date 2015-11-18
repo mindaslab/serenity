@@ -72,7 +72,7 @@ module Serenity
 
       rest = pos == 0 ? text : text[pos..-1]
 
-      src << Line.text(rest) unless rest.nil? or rest.empty?
+      src << Line.text(rest) unless rest.blank?
       src
     end
 

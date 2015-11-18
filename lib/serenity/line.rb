@@ -44,7 +44,7 @@ module Serenity
     end
 
     def escape_code code
-      code.mgsub! [[/&apos;/, "'"], [/&gt;/, '>'], [/&lt;/, '<'], [/&quot;/, '"'], [/&amp;/, '&']]
+      code.mgsub [[/&apos;/, "'"], [/&gt;/, '>'], [/&lt;/, '<'], [/&quot;/, '"'], [/&amp;/, '&']]
     end
   end
 
@@ -52,10 +52,6 @@ module Serenity
     def to_buf
       code = "begin;#{@text};rescue Exception => e; CGI::escapeHTML(e.inspect);end"
       " _buf << (" << escape_code(code) << ").to_s.escape_xml.convert_newlines;"
-    end
-
-    def convert_newlines text
-      text.gsub("First line", '<text:line-break>')
     end
   end
 

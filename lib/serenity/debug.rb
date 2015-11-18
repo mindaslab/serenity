@@ -13,7 +13,7 @@ module Serenity
     end
 
     def debug_dir
-      File.join(File.dirname(__FILE__), '..', '..', 'debug')
+      File.join(File.dirname(__FILE__))
     end
   end
 end
