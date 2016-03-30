@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "serenity"
+  s.name        = "serenity-odt"
   s.version     = "0.2.4"
   s.authors     = "Theo Reichel fork of kremso"
   s.email       = ""
